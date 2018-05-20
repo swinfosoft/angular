@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <form>
+    First No. <input type="text" name="data.num1"
+    [(ngModel)]="data.num1"/> <br/>
+    Second No. <input type="text" name="data.num2"
+    [(ngModel)]="data.num2"/> <br/>
+    <input type="submit" (click)="add()" value="Add"/>
+  </form>
+  <h3 [hidden]="flag">Sum is: {{sum}}</h3>
+ </div>
+
+
