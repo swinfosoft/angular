@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<ngx-spinner  size="medium" color="#fff"   bdOpacity="0.3" bdColor="#333" type="ball-spin-clockwise-fade-rotating"></ngx-spinner>
+ 
+<div class="row">
+    <button type="button" class="btn btn-primary"
+    (click)="loadTasks()">
+      Load ToDo List
+    </button>
+
+</div>
+<div class="row" *ngIf="tasks.length > 0">
+<table class="table table-bordered table-hover table-striped">
+<thead>
+<tr><th>UserId</th><th>TaskId</th><th>Title</th><th>Completed</th></tr>
+<tr *ngFor="let task of tasks">
+<td>{{task.userId}}</td>
+<td>{{task.id}}</td>
+<td>{{task.title}}</td>
+<td>{{task.Completed}}</td>
+</tr>
+</thead>
+
+</table>
+</div>
+<div class="row" *ngIf="tasks.length == 0">
+<h3>No to do task is found.</h3>
+</div>
+  
