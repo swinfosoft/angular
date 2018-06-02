@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<ngx-spinner  size="medium" color="#fff"   bdOpacity="0.3" bdColor="#333" type="ball-spin-clockwise-fade-rotating"></ngx-spinner>
+<ngx-alerts></ngx-alerts>
+<div class="row">
+  <form class="form-horizontal" #registerForm="ngForm">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" #uname="ngModel" 
+      name="model.name" class="form-control" 
+      [(ngModel)]="model.name" required>
+      <span *ngIf="uname.invalid && uname.touched" class="text-error">Name is required.</span>
+    </div>
+    <div class="form-group">
+      <label>MailId</label>
+      <input type="email" name="model.mailId" [(ngModel)]="model.mailId"
+      class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Mobile</label>
+      <input type="text" name="model.mobile" class="form-control" 
+      [(ngModel)]="model.mobile" required>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" name="model.password" 
+      [(ngModel)]="model.password" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Register as</label>
+      <select  name="model.type" 
+      [(ngModel)]="model.type" class="form-control" required>
+       <option value="S">Job Seeker</option>
+       <option value="C">Company</option> 
+      </select> 
+    </div>
+    <div class="form-group">
+          <button type="button" class="btn btn-primary" (click)="registerUser()">Register</button>
+    </div>
+  </form>
+
+</div>
+
