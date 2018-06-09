@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="jumbotron">
+    <div class="page-header text-center"><h3>Login Page</h3></div>
+    <div class="row">
+      <form class="form-horizontal" #loginForm="ngForm">
+        
+        <div class="form-group">
+          <label>MailId</label>
+          <input type="email" #mail="ngModel" name="model.mailId" [(ngModel)]="model.mailId"
+          class="form-control" required>
+          <span *ngIf="mail.invalid && mail.touched" class="text-danger">MailId is required.</span>
+        </div>
+        
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" #password="ngModel" name="model.password" 
+          [(ngModel)]="model.password" class="form-control" required>
+          <span *ngIf="password.invalid && password.touched" class="text-danger">Password is required.</span>
+        </div>
+        
+        <div class="form-group">
+              <button type="button" class="btn btn-primary" (click)="loginUser()">Login</button>
+        </div>
+      </form>
+    
+    </div>
+  </div>
+  
+  
+  
